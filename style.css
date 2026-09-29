@@ -439,3 +439,108 @@ body {
     color: var(--yazi-acik);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+@media (max-width:768px) {
+
+/*navbar*/
+.navbar {
+        padding: 0 20px;
+        flex-wrap: wrap;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+.menu {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    }   
+
+.menu a {
+    font-size: 12px;
+}
+
+.logo span {
+    font-size: 15px;
+}
+
+.logo img {
+    width: 45px;
+}
+
+/*HERO*/
+.hero-video {
+    height: 350px;
+}
+
+.hero-butonlar {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/*HAKKIMIZDA*/
+
+.tanitim-blok {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.makarna4 {
+    width: 100%;
+    max-width: 320px;
+}
+
+.hakkimizda-kutu {
+    max-width: 100%;
+}
+
+.hakkimizda-yazi h2 {
+    font-size: 30px;
+}
+
+/*lezzetlerimiz*/
+
+.lezzetler h2 {
+    font-size: 30px;
+}
+
+/*neden*/
+
+.neden h2 {
+    font-size: 28px;
+}
+
+.neden-kutular {
+    flex-direction: column;
+    gap: 35px;
+}
+
+.neden-kutu + .neden-kutu::before {
+    display: none;
+}
+
+/*iletişim*/
+
+.iletisim h2 {
+    font-size: 28px;
+}
+
+.subeler {
+    grid-template-columns: 1fr;
+}
+
+/*menu sayfası*/
+
+.menu-sayfasi {
+    padding: 100px 20px 60px;
+}
+
+.menu-sayfasi h1 {
+    font-size: 30px;
+}
+
+}
