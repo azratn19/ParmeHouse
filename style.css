@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-koyu: #12241a;
+    --bg-panel: #1a3226;
+    --altin: #c9a35d;
+    --yesil: #3f7d54;
+    --kirmizi: #b23a2f;
+    --yazi-acik: #f5f1e6;
+    --yazi-soluk: #b9c4ba;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-koyu);
+    color: var(--yazi-acik);
+}
+
+/* NAVBAR */
+.navbar {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: var(--bg-koyu);
+    border-bottom: 1px solid rgba(201, 163, 93, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--yazi-acik);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--altin);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--yazi-acik);
+    padding: 4px 12px 4px 4px;
+    border-radius: 40px;
+}
+
+.logo img {
+    width: 55px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--bg-koyu);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* HERO */
+.hero-video {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 78px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-video::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(rgba(18, 36, 26, 0.15), rgba(18, 36, 26, 0.75));
+    z-index: 1;
+}
+
+.hero-butonlar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+    background-color: var(--bg-koyu);
+}
+
+.btn {
+    padding: 15px 36px;
+    background-color: transparent;
+    border: 1px solid var(--altin);
+    color: var(--altin);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--altin);
+    color: var(--bg-koyu);
+}
+
+/* HAKKIMIZDA */
+#hakkimizda {
+    padding: 80px 40px;
+    text-align: center;
+    scroll-margin-top: 78px;
+    background-color: var(--bg-koyu);
+}
+
+.tanitim-blok {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+    background-color: var(--bg-koyu);
+}
+
+.makarna4 {
+    width: 450px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.hakkimizda-yazi h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: var(--altin);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.hakkimizda-kutu {
+    max-width: 650px;
+    padding: 40px;
+    border: 1px solid rgba(201, 163, 93, 0.35);
+    border-radius: 20px;
+    background-color: var(--bg-panel);
+}
+
+.hakkimizda-yazi p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--yazi-soluk);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.hakkimizda-yazi p + p {
+    margin-top: 15px;
+}
+
+#hakkimizda a {
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--altin);
+}
+
+/* LEZZETLERİMİZ */
+.lezzetler {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: var(--bg-panel);
+}
+
+.lezzetler h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: var(--altin);
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.kartlar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.kart {
+    background-color: var(--bg-koyu);
+    border-radius: 16px;
+    padding: 12px 12px 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transition: 0.3s;
+}
+
+.kart:hover {
+    transform: translateY(-8px);
+}
+
+.kart img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.kart h3 {
+    margin: 18px 0 8px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: var(--yazi-acik);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* NEDEN PARMEHOUSE - kutusuz, sade liste */
+.neden {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: var(--bg-koyu);
+}
+
+.neden h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: var(--altin);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.neden-kutular {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.neden-kutu {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+    padding: 10px 40px;
+}
+
+.neden-kutu + .neden-kutu::before {
+    background-color: rgba(201 , 163 , 93 , 0.5);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%);
+    width: 1px;
+    height: 70px;
+
+}
+.simge {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 15px;
+    color: var(--altin);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.neden-kutu h3 {
+    margin-bottom: 11px;
+    font-size: 18px;
+    color: var(--yazi-acik);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.neden-kutu p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--yazi-soluk);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* İLETİŞİM */
+.iletisim {
+    padding: 90px 40px 40px;
+    text-align: center;
+    color: var(--yazi-acik);
+    background-image:
+        linear-gradient(rgba(18, 36, 26, 0.85), rgba(18, 36, 26, 0.85)),
+        url("images/dukkan.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.iletisim h2 {
+    font-size: 38px;
+    margin-bottom: 40px;
+    color: var(--altin);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.subeler {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sube {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(201, 163, 93, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.sube h3 {
+    margin-bottom: 18px;
+    font-size: 19px;
+    color: var(--altin);
+}
+
+.sube p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: var(--yazi-soluk);
+}
+
+.rota {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 1px solid var(--altin);
+    color: var(--altin);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.rota:hover {
+    background-color: var(--altin);
+    color: var(--bg-koyu);
+}
+
+.instagram {
+    display: inline-block;
+    margin-top: 35px;
+    color: var(--yazi-soluk);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.telif {
+    margin-top: 35px;
+    font-size: 13px;
+    color: var(--yazi-soluk);
+    opacity: 0.6;
+}
+
+/*Menü sayfası*/
+
+.menu-sayfasi {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 130px 30px 80px;
+}
+
+.menu-sayfasi h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: var(--altin);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.kartlar-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.menu-kart {
+    background-color: var(--bg-panel);
+    border-radius: 16px;
+    padding: 10px 10px 20px;
+    box-shadow: 0 6px 20px rgba(0 0 0 0.35);
+    transition: 0.3s;
+}
+
+.menu-kart:hover {
+    transform: translateY(-8px);
+}
+
+.menu-kart img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.menu-kart h2 {
+    margin-top: 14px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--yazi-acik);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
