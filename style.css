@@ -589,13 +589,13 @@ body {
 }
     
 .alfredo-blok::before {
-    background: rgba(18, 36, 26, 0.75);
+    background: linear-gradient(to right, rgba(18, 36, 26, 0.75), rgba(18, 36, 26, 0.35) 70%, rgba(18, 36, 26, 0.1));
 }
 
 .alfredo-yazi {
     max-width: 100%;
     padding: 30px 20px;
-    background-color: rgba(18, 36, 26, 0.7);
+    background-color: transparent;
 }
 
 .alfredo-yazi h2 {
