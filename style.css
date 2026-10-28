@@ -583,6 +583,11 @@ body {
     min-height: 450px;
 }
 
+.alfredo-arka {
+    position:absolute;
+    height:100%;
+}
+    
 .alfredo-blok::before {
     background: rgba(18, 36, 26, 0.75);
 }
@@ -590,6 +595,7 @@ body {
 .alfredo-yazi {
     max-width: 100%;
     padding: 30px 20px;
+    background-color: rgba(18, 36, 26, 0.7);
 }
 
 .alfredo-yazi h2 {
